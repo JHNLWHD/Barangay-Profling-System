@@ -1,0 +1,1277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B1F8786-8382-40B7-850B-FA89F54E1A0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Barangay_Profiling_System.My.MyApplication</StartupObject>
+    <RootNamespace>Barangay_Profiling_System</RootNamespace>
+    <AssemblyName>Barangay Profiling System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Barangay Profiling System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Barangay Profiling System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AccountClass.vb" />
+    <Compile Include="Controller\AddressClass.vb" />
+    <Compile Include="Controller\CaseClass.vb" />
+    <Compile Include="Controller\CertificateClass.vb" />
+    <Compile Include="Controller\EmployeeClass.vb" />
+    <Compile Include="Controller\FiscalYearClass.vb" />
+    <Compile Include="Controller\HouseClass.vb" />
+    <Compile Include="Controller\HouseholdClass.vb" />
+    <Compile Include="Controller\PersonClass.vb" />
+    <Compile Include="Model\ConnectionAdapter.vb" />
+    <Compile Include="Model\MethodCollections.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\Account\AccountInfo.designer.vb">
+      <DependentUpon>AccountInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\AccountInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Account\broEmployee.Designer.vb">
+      <DependentUpon>broEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\broEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Account\frmAccountRecord.Designer.vb">
+      <DependentUpon>frmAccountRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\frmAccountRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\Complainant\frmComplainant.Designer.vb">
+      <DependentUpon>frmComplainant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\Complainant\frmComplainant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseRemarks.Designer.vb">
+      <DependentUpon>frmCaseRemarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseRemarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmAddHearingDate.Designer.vb">
+      <DependentUpon>frmAddHearingDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmAddHearingDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCase.Designer.vb">
+      <DependentUpon>frmCase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseDetails.Designer.vb">
+      <DependentUpon>frmCaseDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseRecords.Designer.vb">
+      <DependentUpon>frmCaseRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\frmCaseRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmHearingDetails.Designer.vb">
+      <DependentUpon>frmHearingDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmHearingDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmHearingSchedule.Designer.vb">
+      <DependentUpon>frmHearingSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Hearing\frmHearingSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\Respondent\frmRespondent.Designer.vb">
+      <DependentUpon>frmRespondent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Case and Hearing\Case\Respondent\frmRespondent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Appearance\Appearance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Appearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Clearance\Clearance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Appearance\frmAppearance.designer.vb">
+      <DependentUpon>frmAppearance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Certificates\Appearance\frmAppearance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Clearance\frmClearance.designer.vb">
+      <DependentUpon>frmClearance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Certificates\Clearance\frmClearance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Indigency\frmIndigency.designer.vb">
+      <DependentUpon>frmIndigency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Certificates\Indigency\frmIndigency.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Residency\frmResidency.designer.vb">
+      <DependentUpon>frmResidency.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Certificates\Residency\frmResidency.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Indigency\Indigency.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Indigency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Certificates\Residency\Residency.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Residency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Employee\EmpInfo.designer.vb">
+      <DependentUpon>EmpInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee\EmpInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Employee\frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee\frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Employee\broResident.designer.vb">
+      <DependentUpon>broResident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee\broResident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Employee\frmEmployeeRecords.designer.vb">
+      <DependentUpon>frmEmployeeRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee\frmEmployeeRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Account\frmAccount.Designer.vb">
+      <DependentUpon>frmAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\frmAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\History\AdminActivityLog.designer.vb">
+      <DependentUpon>AdminActivityLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\AdminActivityLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\History\HouseHistory.designer.vb">
+      <DependentUpon>HouseHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\HouseHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\History\HouseholdMember.designer.vb">
+      <DependentUpon>HouseholdMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\HouseholdMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\History\ResHouseholdHistory.designer.vb">
+      <DependentUpon>ResHouseholdHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\ResHouseholdHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\History\UserActivityLog.designer.vb">
+      <DependentUpon>UserActivityLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\UserActivityLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home\frmHome.designer.vb">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home\frmHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\addHousehold.designer.vb">
+      <DependentUpon>addHousehold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\addHousehold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\broHousehold.designer.vb">
+      <DependentUpon>broHousehold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\broHousehold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\frmBrowseHouse.Designer.vb">
+      <DependentUpon>frmBrowseHouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\frmBrowseHouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\frmHousehold.Designer.vb">
+      <DependentUpon>frmHousehold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\frmHousehold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\frmHouseholdRecords.designer.vb">
+      <DependentUpon>frmHouseholdRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\frmHouseholdRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Household\HouseholdInfo.designer.vb">
+      <DependentUpon>HouseholdInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Household\HouseholdInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddAddress.Designer.vb">
+      <DependentUpon>frmAddAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddDrive.Designer.vb">
+      <DependentUpon>frmAddDrive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddDrive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddHouseOwner.Designer.vb">
+      <DependentUpon>frmAddHouseOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddHouseOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddLotOwner.Designer.vb">
+      <DependentUpon>frmAddLotOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddLotOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddRoad.Designer.vb">
+      <DependentUpon>frmAddRoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddRoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddStreet.Designer.vb">
+      <DependentUpon>frmAddStreet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddStreet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmBrowseHouseOwner.Designer.vb">
+      <DependentUpon>frmBrowseHouseOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmBrowseHouseOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmBrowseLotOwner.Designer.vb">
+      <DependentUpon>frmBrowseLotOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmBrowseLotOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmBrowsePersonSpouse.Designer.vb">
+      <DependentUpon>frmBrowsePersonSpouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmBrowsePersonSpouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmHouse.Designer.vb">
+      <DependentUpon>frmHouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmHouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmHouseRecord.Designer.vb">
+      <DependentUpon>frmHouseRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmHouseRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\HouseInfo.designer.vb">
+      <DependentUpon>HouseInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\HouseInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\HouseOwnerInfo.designer.vb">
+      <DependentUpon>HouseOwnerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\HouseOwnerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\LotOwnerInfo.Designer.vb">
+      <DependentUpon>LotOwnerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\LotOwnerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\ShowOwnerHistoryHouse.Designer.vb">
+      <DependentUpon>ShowOwnerHistoryHouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\ShowOwnerHistoryHouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frm_login.designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\broBusAddress.Designer.vb">
+      <DependentUpon>broBusAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\broBusAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\broOwner.Designer.vb">
+      <DependentUpon>broOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\broOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\BusEstInfo.designer.vb">
+      <DependentUpon>BusEstInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\BusEstInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\frmBusEst.Designer.vb">
+      <DependentUpon>frmBusEst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\frmBusEst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\frmBusEstRecord.Designer.vb">
+      <DependentUpon>frmBusEstRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\BusEst\frmBusEstRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addOccupation.Designer.vb">
+      <DependentUpon>addOccupation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addOccupation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\House\frmAddPurok.Designer.vb">
+      <DependentUpon>frmAddPurok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\House\frmAddPurok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addRegion.Designer.vb">
+      <DependentUpon>addRegion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addRegion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addTribe.Designer.vb">
+      <DependentUpon>addTribe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\addTribe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broExistingPerson.Designer.vb">
+      <DependentUpon>broExistingPerson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broExistingPerson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broFamHead.Designer.vb">
+      <DependentUpon>broFamHead.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broFamHead.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broPerson.Designer.vb">
+      <DependentUpon>broPerson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\broPerson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmAddSpouse.Designer.vb">
+      <DependentUpon>frmAddSpouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmAddSpouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmCaseHistory.Designer.vb">
+      <DependentUpon>frmCaseHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmCaseHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmProfiling.Designer.vb">
+      <DependentUpon>frmProfiling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmProfiling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmResidentRecord.Designer.vb">
+      <DependentUpon>frmResidentRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmResidentRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmRole.Designer.vb">
+      <DependentUpon>frmRole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmRole.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmViewFamilyMember.Designer.vb">
+      <DependentUpon>frmViewFamilyMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\frmViewFamilyMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profiling\Person\Residentinfo.designer.vb">
+      <DependentUpon>Residentinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profiling\Person\Residentinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\AccDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\CaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\DriveDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriveDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\EmpDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\HearingSchedDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HearingSchedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\HouseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\HouseHoldDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseHoldDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\OtherDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\PurokDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurokDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\ResDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\ResDataSet.vb">
+      <DependentUpon>ResDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Datasets\StreetDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StreetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\AccountReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\CaseReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\DriveReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriveReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\EmployeeReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\FiscalReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FiscalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\HearingScheduleReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HearingScheduleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\HouseHoldReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseHoldReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\HouseReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\OccupationReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OccupationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\PurokReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurokReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\Religion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Religion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\ResidentReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResidentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\RoadReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoadReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\StreetReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StreetReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Document\TribeReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TribeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Report Viewer\DisplayReports.designer.vb">
+      <DependentUpon>DisplayReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\Report Viewer\DisplayReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Drive\frmDrive.Designer.vb">
+      <DependentUpon>frmDrive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Drive\frmDrive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Drive\frmDriveRecords.Designer.vb">
+      <DependentUpon>frmDriveRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Drive\frmDriveRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Purok\frmPurok.Designer.vb">
+      <DependentUpon>frmPurok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Purok\frmPurok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Purok\frmPurokRecords.Designer.vb">
+      <DependentUpon>frmPurokRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Purok\frmPurokRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Road\frmRoad.Designer.vb">
+      <DependentUpon>frmRoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Road\frmRoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Road\frmRoadRecords.Designer.vb">
+      <DependentUpon>frmRoadRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Road\frmRoadRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Street\frmStreet.Designer.vb">
+      <DependentUpon>frmStreet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Street\frmStreet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Address\Street\frmStreetRecords.Designer.vb">
+      <DependentUpon>frmStreetRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Address\Street\frmStreetRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Fiscal Year\frmFiscalYear.Designer.vb">
+      <DependentUpon>frmFiscalYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Fiscal Year\frmFiscalYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Fiscal Year\frmFiscalYearRecords.Designer.vb">
+      <DependentUpon>frmFiscalYearRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Fiscal Year\frmFiscalYearRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Occupation\frmOccupation.Designer.vb">
+      <DependentUpon>frmOccupation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Occupation\frmOccupation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Occupation\frmOccupationRecords.Designer.vb">
+      <DependentUpon>frmOccupationRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Occupation\frmOccupationRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Religion\frmReligion.Designer.vb">
+      <DependentUpon>frmReligion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Religion\frmReligion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Religion\frmReligionRecords.Designer.vb">
+      <DependentUpon>frmReligionRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Religion\frmReligionRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Tribe\frmTribe.Designer.vb">
+      <DependentUpon>frmTribe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Tribe\frmTribe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Settings\Tribe\frmTribeRecords.Designer.vb">
+      <DependentUpon>frmTribeRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings\Tribe\frmTribeRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\AccountInfo.resx">
+      <DependentUpon>AccountInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\broEmployee.resx">
+      <DependentUpon>broEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\frmAccountRecord.resx">
+      <DependentUpon>frmAccountRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\Complainant\frmComplainant.resx">
+      <DependentUpon>frmComplainant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\frmCaseRemarks.resx">
+      <DependentUpon>frmCaseRemarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Hearing\frmAddHearingDate.resx">
+      <DependentUpon>frmAddHearingDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\frmCase.resx">
+      <DependentUpon>frmCase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\frmCaseDetails.resx">
+      <DependentUpon>frmCaseDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\frmCaseRecords.resx">
+      <DependentUpon>frmCaseRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Hearing\frmHearingDetails.resx">
+      <DependentUpon>frmHearingDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Hearing\frmHearingSchedule.resx">
+      <DependentUpon>frmHearingSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Case and Hearing\Case\Respondent\frmRespondent.resx">
+      <DependentUpon>frmRespondent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Appearance\Appearance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Appearance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Clearance\Clearance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Clearance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Appearance\frmAppearance.resx">
+      <DependentUpon>frmAppearance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Clearance\frmClearance.resx">
+      <DependentUpon>frmClearance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Indigency\frmIndigency.resx">
+      <DependentUpon>frmIndigency.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Residency\frmResidency.resx">
+      <DependentUpon>frmResidency.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Indigency\Indigency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Indigency.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Certificates\Residency\Residency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Residency.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee\EmpInfo.resx">
+      <DependentUpon>EmpInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee\broResident.resx">
+      <DependentUpon>broResident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee\frmEmployeeRecords.resx">
+      <DependentUpon>frmEmployeeRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\frmAccount.resx">
+      <DependentUpon>frmAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History\AdminActivityLog.resx">
+      <DependentUpon>AdminActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History\HouseHistory.resx">
+      <DependentUpon>HouseHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History\HouseholdMember.resx">
+      <DependentUpon>HouseholdMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History\ResHouseholdHistory.resx">
+      <DependentUpon>ResHouseholdHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History\UserActivityLog.resx">
+      <DependentUpon>UserActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Home\frmHome.resx">
+      <DependentUpon>frmHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\addHousehold.resx">
+      <DependentUpon>addHousehold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\broHousehold.resx">
+      <DependentUpon>broHousehold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\frmBrowseHouse.resx">
+      <DependentUpon>frmBrowseHouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\frmHousehold.resx">
+      <DependentUpon>frmHousehold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\frmHouseholdRecords.resx">
+      <DependentUpon>frmHouseholdRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Household\HouseholdInfo.resx">
+      <DependentUpon>HouseholdInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddAddress.resx">
+      <DependentUpon>frmAddAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddDrive.resx">
+      <DependentUpon>frmAddDrive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddHouseOwner.resx">
+      <DependentUpon>frmAddHouseOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddLotOwner.resx">
+      <DependentUpon>frmAddLotOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddRoad.resx">
+      <DependentUpon>frmAddRoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddStreet.resx">
+      <DependentUpon>frmAddStreet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmBrowseHouseOwner.resx">
+      <DependentUpon>frmBrowseHouseOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmBrowseLotOwner.resx">
+      <DependentUpon>frmBrowseLotOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmBrowsePersonSpouse.resx">
+      <DependentUpon>frmBrowsePersonSpouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmHouse.resx">
+      <DependentUpon>frmHouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmHouseRecord.resx">
+      <DependentUpon>frmHouseRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\HouseInfo.resx">
+      <DependentUpon>HouseInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\HouseOwnerInfo.resx">
+      <DependentUpon>HouseOwnerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\LotOwnerInfo.resx">
+      <DependentUpon>LotOwnerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\ShowOwnerHistoryHouse.resx">
+      <DependentUpon>ShowOwnerHistoryHouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\BusEst\broBusAddress.resx">
+      <DependentUpon>broBusAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\BusEst\broOwner.resx">
+      <DependentUpon>broOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\BusEst\BusEstInfo.resx">
+      <DependentUpon>BusEstInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\BusEst\frmBusEst.resx">
+      <DependentUpon>frmBusEst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\BusEst\frmBusEstRecord.resx">
+      <DependentUpon>frmBusEstRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\addOccupation.resx">
+      <DependentUpon>addOccupation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\House\frmAddPurok.resx">
+      <DependentUpon>frmAddPurok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\addRegion.resx">
+      <DependentUpon>addRegion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\addTribe.resx">
+      <DependentUpon>addTribe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\broExistingPerson.resx">
+      <DependentUpon>broExistingPerson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\broFamHead.resx">
+      <DependentUpon>broFamHead.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\broPerson.resx">
+      <DependentUpon>broPerson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmAddSpouse.resx">
+      <DependentUpon>frmAddSpouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmCaseHistory.resx">
+      <DependentUpon>frmCaseHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmProfiling.resx">
+      <DependentUpon>frmProfiling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmResidentRecord.resx">
+      <DependentUpon>frmResidentRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmRole.resx">
+      <DependentUpon>frmRole.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\frmViewFamilyMember.resx">
+      <DependentUpon>frmViewFamilyMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profiling\Person\Residentinfo.resx">
+      <DependentUpon>Residentinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\AccountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\CaseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CaseReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\DriveReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DriveReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\EmployeeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\FiscalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FiscalReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\HearingScheduleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HearingScheduleReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\HouseHoldReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HouseHoldReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\HouseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HouseReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\OccupationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OccupationReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\PurokReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurokReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\Religion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Religion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\ResidentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResidentReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\RoadReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RoadReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\StreetReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StreetReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Document\TribeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TribeReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Report Viewer\DisplayReports.resx">
+      <DependentUpon>DisplayReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Drive\frmDrive.resx">
+      <DependentUpon>frmDrive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Drive\frmDriveRecords.resx">
+      <DependentUpon>frmDriveRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Purok\frmPurok.resx">
+      <DependentUpon>frmPurok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Purok\frmPurokRecords.resx">
+      <DependentUpon>frmPurokRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Road\frmRoad.resx">
+      <DependentUpon>frmRoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Road\frmRoadRecords.resx">
+      <DependentUpon>frmRoadRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Street\frmStreet.resx">
+      <DependentUpon>frmStreet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Address\Street\frmStreetRecords.resx">
+      <DependentUpon>frmStreetRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Fiscal Year\frmFiscalYear.resx">
+      <DependentUpon>frmFiscalYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Fiscal Year\frmFiscalYearRecords.resx">
+      <DependentUpon>frmFiscalYearRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Occupation\frmOccupation.resx">
+      <DependentUpon>frmOccupation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Occupation\frmOccupationRecords.resx">
+      <DependentUpon>frmOccupationRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Religion\frmReligion.resx">
+      <DependentUpon>frmReligion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Religion\frmReligionRecords.resx">
+      <DependentUpon>frmReligionRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Tribe\frmTribe.resx">
+      <DependentUpon>frmTribe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Settings\Tribe\frmTribeRecords.resx">
+      <DependentUpon>frmTribeRecords.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="View\Reports\Datasets\AccDataSet.xsc">
+      <DependentUpon>AccDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\AccDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Reports\Datasets\AccDataSet.xss">
+      <DependentUpon>AccDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\CaseDataSet.xsc">
+      <DependentUpon>CaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\CaseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CaseDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\CaseDataSet.xss">
+      <DependentUpon>CaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\DriveDataSet.xsc">
+      <DependentUpon>DriveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\DriveDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DriveDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Reports\Datasets\DriveDataSet.xss">
+      <DependentUpon>DriveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\EmpDataSet.xsc">
+      <DependentUpon>EmpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\EmpDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\EmpDataSet.xss">
+      <DependentUpon>EmpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HearingSchedDataSet.xsc">
+      <DependentUpon>HearingSchedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HearingSchedDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HearingSchedDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\HearingSchedDataSet.xss">
+      <DependentUpon>HearingSchedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HouseDataSet.xsc">
+      <DependentUpon>HouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HouseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\HouseDataSet.xss">
+      <DependentUpon>HouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HouseHoldDataSet.xsc">
+      <DependentUpon>HouseHoldDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\HouseHoldDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseHoldDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\HouseHoldDataSet.xss">
+      <DependentUpon>HouseHoldDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\OtherDataSet.xsc">
+      <DependentUpon>OtherDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\OtherDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OtherDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Reports\Datasets\OtherDataSet.xss">
+      <DependentUpon>OtherDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\PurokDataSet.xsc">
+      <DependentUpon>PurokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\PurokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PurokDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Reports\Datasets\PurokDataSet.xss">
+      <DependentUpon>PurokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\ResDataSet.xsc">
+      <DependentUpon>ResDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\ResDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\Datasets\ResDataSet.xss">
+      <DependentUpon>ResDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\StreetDataSet.xsc">
+      <DependentUpon>StreetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\Datasets\StreetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StreetDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\Reports\Datasets\StreetDataSet.xss">
+      <DependentUpon>StreetDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,427 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmDrive
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDrive))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.pnlCenter = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnShowRecords = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.gboInfo = New System.Windows.Forms.GroupBox()
+        Me.txtDrive = New System.Windows.Forms.TextBox()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.pnlSearch = New System.Windows.Forms.Panel()
+        Me.toolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.txtSearch = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.dgvSearch = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlCenter.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.gboInfo.SuspendLayout()
+        Me.pnlSearch.SuspendLayout()
+        Me.toolStrip1.SuspendLayout()
+        CType(Me.dgvSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'pnlCenter
+        '
+        Me.pnlCenter.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.pnlCenter.Controls.Add(Me.Panel3)
+        Me.pnlCenter.Controls.Add(Me.gboInfo)
+        Me.pnlCenter.Controls.Add(Me.pnlSearch)
+        Me.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlCenter.Location = New System.Drawing.Point(0, 60)
+        Me.pnlCenter.Name = "pnlCenter"
+        Me.pnlCenter.Size = New System.Drawing.Size(953, 272)
+        Me.pnlCenter.TabIndex = 23
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel3.Controls.Add(Me.btnShowRecords)
+        Me.Panel3.Controls.Add(Me.btnEdit)
+        Me.Panel3.Controls.Add(Me.btnSave)
+        Me.Panel3.Controls.Add(Me.btnNew)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel3.Location = New System.Drawing.Point(743, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(210, 272)
+        Me.Panel3.TabIndex = 24
+        '
+        'btnShowRecords
+        '
+        Me.btnShowRecords.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnShowRecords.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnShowRecords.FlatAppearance.BorderSize = 0
+        Me.btnShowRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowRecords.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnShowRecords.ForeColor = System.Drawing.Color.White
+        Me.btnShowRecords.Location = New System.Drawing.Point(46, 207)
+        Me.btnShowRecords.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnShowRecords.Name = "btnShowRecords"
+        Me.btnShowRecords.Size = New System.Drawing.Size(117, 51)
+        Me.btnShowRecords.TabIndex = 16
+        Me.btnShowRecords.Text = "Show Records"
+        Me.btnShowRecords.UseVisualStyleBackColor = False
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnEdit.Enabled = False
+        Me.btnEdit.FlatAppearance.BorderSize = 0
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(46, 144)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(117, 51)
+        Me.btnEdit.TabIndex = 15
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btnSave
+        '
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnSave.Enabled = False
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(46, 81)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(117, 51)
+        Me.btnSave.TabIndex = 14
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
+        '
+        'btnNew
+        '
+        Me.btnNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.btnNew.FlatAppearance.BorderSize = 0
+        Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNew.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNew.ForeColor = System.Drawing.Color.White
+        Me.btnNew.Location = New System.Drawing.Point(46, 14)
+        Me.btnNew.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(117, 51)
+        Me.btnNew.TabIndex = 13
+        Me.btnNew.Text = "New"
+        Me.btnNew.UseVisualStyleBackColor = False
+        '
+        'gboInfo
+        '
+        Me.gboInfo.Controls.Add(Me.txtDrive)
+        Me.gboInfo.Controls.Add(Me.cboStatus)
+        Me.gboInfo.Controls.Add(Me.Label2)
+        Me.gboInfo.Controls.Add(Me.Label12)
+        Me.gboInfo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gboInfo.Location = New System.Drawing.Point(271, 6)
+        Me.gboInfo.Name = "gboInfo"
+        Me.gboInfo.Size = New System.Drawing.Size(466, 258)
+        Me.gboInfo.TabIndex = 26
+        Me.gboInfo.TabStop = False
+        Me.gboInfo.Text = "Drive Information"
+        '
+        'txtDrive
+        '
+        Me.txtDrive.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDrive.Location = New System.Drawing.Point(134, 103)
+        Me.txtDrive.Name = "txtDrive"
+        Me.txtDrive.Size = New System.Drawing.Size(223, 30)
+        Me.txtDrive.TabIndex = 23
+        '
+        'cboStatus
+        '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Items.AddRange(New Object() {"Active", "Inactive"})
+        Me.cboStatus.Location = New System.Drawing.Point(134, 193)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(223, 28)
+        Me.cboStatus.TabIndex = 22
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(79, 158)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 23)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Status"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(79, 67)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(100, 23)
+        Me.Label12.TabIndex = 18
+        Me.Label12.Text = "Drive Name"
+        '
+        'pnlSearch
+        '
+        Me.pnlSearch.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.pnlSearch.Controls.Add(Me.toolStrip1)
+        Me.pnlSearch.Controls.Add(Me.dgvSearch)
+        Me.pnlSearch.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlSearch.Location = New System.Drawing.Point(0, 0)
+        Me.pnlSearch.Name = "pnlSearch"
+        Me.pnlSearch.Size = New System.Drawing.Size(265, 272)
+        Me.pnlSearch.TabIndex = 25
+        '
+        'toolStrip1
+        '
+        Me.toolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.toolStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.toolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel3, Me.ToolStripSeparator7, Me.ToolStripSeparator8, Me.ToolStripSeparator3, Me.txtSearch, Me.ToolStripSeparator2, Me.ToolStripSeparator1, Me.ToolStripButton1})
+        Me.toolStrip1.Location = New System.Drawing.Point(11, 11)
+        Me.toolStrip1.Name = "toolStrip1"
+        Me.toolStrip1.Size = New System.Drawing.Size(271, 27)
+        Me.toolStrip1.TabIndex = 443
+        Me.toolStrip1.Text = "toolStrip1"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.ForeColor = System.Drawing.Color.Black
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(53, 24)
+        Me.ToolStripLabel3.Text = "Search"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(150, 27)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(24, 24)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'dgvSearch
+        '
+        Me.dgvSearch.AllowUserToAddRows = False
+        Me.dgvSearch.AllowUserToDeleteRows = False
+        Me.dgvSearch.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        Me.dgvSearch.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvSearch.BackgroundColor = System.Drawing.Color.White
+        Me.dgvSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvSearch.ColumnHeadersHeight = 30
+        Me.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvSearch.ColumnHeadersVisible = False
+        Me.dgvSearch.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        Me.dgvSearch.EnableHeadersVisualStyles = False
+        Me.dgvSearch.GridColor = System.Drawing.Color.White
+        Me.dgvSearch.Location = New System.Drawing.Point(13, 42)
+        Me.dgvSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvSearch.MultiSelect = False
+        Me.dgvSearch.Name = "dgvSearch"
+        Me.dgvSearch.ReadOnly = True
+        Me.dgvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSearch.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvSearch.RowHeadersVisible = False
+        Me.dgvSearch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvSearch.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSearch.Size = New System.Drawing.Size(245, 223)
+        Me.dgvSearch.TabIndex = 444
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Name"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Status"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(953, 60)
+        Me.Panel1.TabIndex = 20
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(953, 60)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "DRIVE MODULE"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 332)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(953, 60)
+        Me.Panel2.TabIndex = 19
+        '
+        'frmDrive
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(953, 392)
+        Me.Controls.Add(Me.pnlCenter)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Name = "frmDrive"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.pnlCenter.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.gboInfo.ResumeLayout(False)
+        Me.gboInfo.PerformLayout()
+        Me.pnlSearch.ResumeLayout(False)
+        Me.pnlSearch.PerformLayout()
+        Me.toolStrip1.ResumeLayout(False)
+        Me.toolStrip1.PerformLayout()
+        CType(Me.dgvSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+
+    Friend WithEvents pnlCenter As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnShowRecords As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnNew As Button
+    Friend WithEvents gboInfo As GroupBox
+    Friend WithEvents txtDrive As TextBox
+    Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents pnlSearch As Panel
+    Private WithEvents toolStrip1 As ToolStrip
+    Friend WithEvents ToolStripLabel3 As ToolStripLabel
+    Private WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Private WithEvents ToolStripSeparator8 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents txtSearch As ToolStripTextBox
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents dgvSearch As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+End Class
